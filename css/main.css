@@ -1,0 +1,451 @@
+
+/*****************************************HEADER*****************************************/
+
+header{
+  width: 100%;
+  backdrop-filter: blur(160px);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.mobile_menu{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  backdrop-filter: blur(40px);
+}
+
+.navigation_list_mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.navigation_item_mobile{
+  font-size: var(--text-20);
+}
+
+.close_mobile_menu{
+  position: absolute;
+  bottom: 3.2rem;
+}
+
+/* .header_onscroll{
+
+} */
+
+.header {
+  padding: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu_icon{
+  display: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.logotype-white {
+  display: none;
+}
+
+.navigation_list{
+  display: flex;
+  align-items: center;
+  max-width: 540px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navigation_item{
+  font-size: var(--text-16);
+  display: flex;
+  align-items: center;
+  font-weight: var(--medium);
+}
+
+.navigation_item img {
+  width: 1.2rem;
+  display: none;
+}
+
+.navigation_selected{
+  border-bottom: 3px solid var(--primary-color);
+}
+
+/*******************************Breaking Points*******************************/
+
+@media(max-width: 1100px){
+  .navigation_list{
+    max-width: 400px;
+  }
+
+  .logotype img {
+    max-width: 200px;
+  }
+}
+
+@media(max-width: 769px){
+  .header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  .logotype-white {
+    display: flex;
+    max-width: 200px;
+  }
+  
+
+  .logotype{
+    display: none;
+  }
+
+  .menu_icon{
+    display: flex;
+  }
+
+  .navigation_list{
+    display: none;
+  }
+
+  .header > .button-filled {
+      display: none;
+  }
+  
+}
+
+@media(max-width: 540px){
+.header{
+  padding: 2rem 1rem;
+}
+.logotype-white img {
+  width: 180px;
+}
+}
+
+/*****************************************HERO*****************************************/
+
+.hero_wrapper{
+  background-image: url('../img/BLOBS.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 10rem;
+  padding-block: 22rem;
+}
+
+.hero_content{
+  display: flex;
+  width: 100%;
+  gap: 4rem;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.copy_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.copy_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.copy_text h1 {
+  font-size: var(--text-46);
+}
+
+.copy_text p{
+  font-size: var(--text-16);
+  max-width: 600px;
+  width: 100%;
+  line-height: 2.4rem;
+}
+
+.copy_text p:nth-of-type(2){
+  display: none;
+}
+
+.gallery_hero{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gallery_hero_mobile{
+  display: none;
+}
+
+.gallery_item{
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  max-width: 250px;
+  box-shadow: var(--dp2-shadow);
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+}
+
+.gallery_1{
+  grid-row: 1/3;
+}
+
+.gallery_2{
+  grid-column: 2/3;
+}
+
+.gallery_3{
+  grid-column: 2/3;
+}
+
+.item_wrapper
+
+.logotype-white img {
+  max-width: 200px;
+}
+
+/*******************************Breaking Points*******************************/
+
+@media(max-width: 1100px){
+  .hero_wrapper{
+    background-image: unset;
+    padding-block: 4.8rem;
+  }
+
+  .gallery_hero{
+    display: none;
+  }
+
+  .gallery_hero_mobile{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .gallery_item{
+    height: 200px;
+    width: 230px;
+  }
+
+  .copy_text h1 {
+    font-size: 4rem;
+    min-width: unset;
+  }
+  
+  .copy_text p{
+    font-size: var(--text-16);
+    max-width: 645px;
+  }
+  
+}
+
+@media(max-width: 769px){
+  .hero_wrapper{
+    background-image: unset;
+  }
+
+  .gallery_hero_mobile{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .gallery_hero_mobile::-webkit-scrollbar { 
+    display: none;
+  }
+
+  .gallery_item{
+    width: 100%;
+  }
+
+  .copy_text h1 {
+    font-size: var(--text-28);
+    text-align: center;
+  }
+
+  .copy_text p:nth-of-type(2){
+    display: flex;
+    max-width: 290px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .copy_text p:nth-of-type(1){
+    display: none;
+  }
+  
+  .copy_text p{
+    font-size: var(--text-12);
+    max-width: 600px;
+    width: 100%;
+    line-height: 1.6rem;
+    text-align: center;
+  }
+}
+
+@media(max-width: 540px){
+  .copy_text h1 {
+    font-size: var(--text-20);
+  }
+
+  .copy_text{
+    gap: 1rem;
+  }
+}
+
+/*****************************************SERVICES*****************************************/
+
+.services_wrapper{
+  padding-block: 10rem;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 9.6rem;
+}
+
+.services_list{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.services_item{
+ padding: 4.4rem 1.6rem 2.2rem 1.6rem ;
+  border: 1px solid var(--white-10);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 284px;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  background: var(--white-10);
+}
+
+.service_1 > img{
+  width: 100px;
+  margin-bottom: 2rem;
+}
+
+.service_2 > img{
+  width: 120px;
+  height: auto;
+}
+
+.service_3 > img{
+  width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.service_4 > img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+  margin-top: 4.5rem;
+}
+
+.services_item p{
+  font-size: var(--text-16);
+  color: var(--white);
+  max-width: 250px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: var(--medium);
+}
+
+.services_item:nth-of-type(4) p{
+  margin-bottom: 5rem;
+}
+
+.services_item span {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: var(--text-14);
+  color: var(--white);
+}
+
+.services_item span img {
+  width: 16px;
+}
+
+/*******************************Breaking Points*******************************/
+@media(max-width: 769px){
+.services_wrapper{
+  padding-block: 5rem;
+  gap: 3.6rem;
+}
+
+.services_item{
+   max-width: 284px;
+   width: 100%;
+ }
+ 
+ .service_1 > img{
+   width: 80px;
+   margin-bottom: 2rem;
+ }
+ 
+ .service_2 > img{
+   width: 100px;
+   height: auto;
+ }
+ 
+ .service_3 > img{
+   width: 160px;
+   height: auto;
+   margin-bottom: 2rem;
+ }
+ 
+ .service_4 > img {
+   width: 160px;
+   height: auto;
+   margin-bottom: 3.6rem;
+   margin-top: 2rem;
+ }
+ 
+ .services_item p{
+   font-size: var(--text-14);
+   color: var(--white);
+   max-width: 250px;
+   text-align: center;
+   margin-bottom: 2rem;
+ }
+ 
+ .services_item span {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   font-size: var(--text-12);
+   color: var(--white);
+ }
+ 
+ .services_item span img {
+   width: 16px;
+ }
+
+ .services_item:nth-of-type(4) p{
+  margin-bottom: 3rem;
+}
+}
