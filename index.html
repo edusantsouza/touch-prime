@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeNA9-tb5wAyG3hinbfy5isFxXDgq4838&callback=console.debug&libraries=maps,marker&v=beta">
+  </script>
 </head>
 
 <body>
@@ -24,13 +26,13 @@
     </ul>
     <img class="close_mobile_menu" src="/img/icons/chevron-down.svg" alt="fechar menu">
   </div>
+
   <header>
-
-
     <div class="container header">
-      <a class="menu_icon" href="#hero">
+      <div class="menu_icon" href="#">
         <img src="/img/icons/menu.svg" alt="Botão de menu">
-      </a>
+      </div>
+
       <a class="logotype" href="#hero">
         <img src="./img/logo/logotype.svg" alt="Touch Prime Logo">
       </a>
@@ -38,15 +40,14 @@
         <img src="./img/logo/logotype-white.svg" alt="Touch Prime Logo">
       </a>
       <ul class="navigation_list">
-        <li class="navigation_item navigation_selected"><a href="#hero">Início</a></li>
-        <li class="navigation_item"><a href="#services">Serviços</a></li>
-        <li class="navigation_item"><a href="#products">Produtos</a> <img src="img/icons/chevron-down.svg" alt="chevron-down"></li>
-        <li class="navigation_item"><a href="#address">Atendimento</a></li>
+        <li class="navigation_item "><a href="" class="navigation_selected hero">Início</a></li>
+        <li class="navigation_item"><a href="" class="services">Serviços</a></li>
+        <li class="navigation_item"><a href="" class="products">Produtos</a></li>
+        <li class="navigation_item"><a href="" class="testimonials">Avaliações</a></li>
       </ul>
-      <a class="button_filled" href="wa.me" target="_blank">Contato</a>
+      <a class="button_filled" href="#address">Contato</a>
     </div>
   </header>
-
 
   <section id="hero" class="hero_wrapper">
     <div class="container hero_content">
@@ -55,7 +56,7 @@
           <h1>O lugar ideal para você</h1>
           <p>Descubra uma ampla seleção de produtos de alta qualidade, desde produtos de informática e
             video games até acessórios para smartphones. Nossa equipe está pronta para ajudá-lo a
-            encontrar as melhores soluções e oferecer os melhor serviços!</p>
+            encontrar as melhores soluções e serviços!</p>
           <p>Ampla seleção de produtos de alta qualidade e suporte especializado para encontrar
             as melhores soluções e serviços.</p>
         </div>
@@ -108,7 +109,213 @@
 
   </section>
 
+  <section class="brands_wrapper">
+    <img src="/img/brands/jbl.svg" alt="JBL Logo">
+    <img src="/img/brands/intel.svg" alt="Intel Logo">
+    <img src="/img/brands/amd.svg" alt="AMD Logo">
+    <img src="/img/brands/apple.svg" alt="Apple Logo">
+    <img src="/img/brands/logitech.svg" alt="Logitech Logo">
+  </section>
 
+  <section id="products" class="products_wrapper">
+    <div class="products_header container">
+      <h1>Aqui o catálogo é <span>Prime</span></h1>
+    </div>
+
+    <div class="products_list container">
+      <div class="product_item">
+        <img src="/img/products/teclado.png" alt="Teclado e Mouse Gamer">
+        <span>Teclados e Mouses Gamer</span>
+      </div>
+
+      <div class="product_item">
+        <img src="/img/products/headset.png" alt="Headsets Gamer">
+        <span>Headsets</span>
+      </div>
+
+      <div class="product_item">
+        <img src="/img/products/notebook.png" alt="Notebooks Gamer">
+        <span>Notebooks e PCs Gamer</span>
+      </div>
+
+      <div class="product_item">
+        <img src="/img/products/roteador.png" alt="Roteadores">
+        <span>Roteadores</span>
+      </div>
+
+      <div class="product_item">
+        <img src="/img/products/ps5.png" alt="Videos Games">
+        <span>Video Games</span>
+      </div>
+
+      <div class="product_item">
+        <img src="/img/products/cadeira.png" alt="Cadeira Gamer">
+        <span>Cadeiras Gamer</span>
+      </div>
+    </div>
+    <div class="products_cta">
+      <a class="button_outline" href="wa.me" target="_blank">Conheça a nossa loja</a>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials_wrapper">
+    <div class="title">
+      <h1>Nossas avaliações</h1>
+      <p>O que os nossos clientes dizem sobre o nosso atendimento</p>
+    </div>
+
+    <div class="testimonials_list container">
+      <div class="testionial_item">
+        <div class="item_rating">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+        </div>
+
+        <div class="item_content">
+          <p>“Fui tirar uma dúvida na loja e fui muito bem tratada pelo vendedor. Muito simpático e atencioso,
+            me ajudou com uma informação mesmo não sendo um serviço diretamente feito pela loja.
+            É raro um atendimento sem tentarem apenas te empurrar um serviço, mas sim se importando em ajudar!
+            Obrigada pelo suporte, sem dúvidas irei indicar a todos.”</p>
+        </div>
+
+        <div class="item_author">
+          <img src="/img/testimonials/Ellipse 5-2.png" alt="foto do autor">
+          <span>Giulia Senna</span>
+        </div>
+      </div>
+
+      <div class="testionial_item">
+        <div class="item_rating">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+        </div>
+
+        <div class="item_content">
+          <p>“Super indico, o serviço feito no meu telefone
+            foi rápido e muito bem feito!
+            Ele segue funcionando perfeitamente como qnd comprei!”</p>
+        </div>
+
+        <div class="item_author">
+          <img src="/img/testimonials/Ellipse 5.png" alt="foto do autor">
+          <span>Samanta Passos</span>
+        </div>
+      </div>
+
+      <div class="testionial_item">
+        <div class="item_rating">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+        </div>
+
+        <div class="item_content">
+          <p>“Loja marvilhoooosa!Muito gentis e atenciosos. Levei meu Notebook,
+            ferramenta de trabalho. Serviço de excelência, trazendo esclarecimento
+            das melhores opções. Sem falar na agilidade. Fiquei muitíssimo satisfeita.
+            Super Recomendo!”</p>
+        </div>
+
+        <div class="item_author">
+          <img src="/img/testimonials/Ellipse 5-1.png" alt="foto do autor">
+          <span>Mônica Silva Lopes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide_buttons">
+      <div id="slide_left">
+        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_29_10149)">
+            <path d="M7.08979 4.28757L2.75481 8.62255C2.53955 8.83808 2.41865 9.13023 2.41865 9.43484C2.41865 9.73944 2.53955 10.0316 2.75481 10.2471L7.08903 14.5829C7.30466 14.7985 7.59712 14.9196 7.90207 14.9196C8.20703 14.9196 8.49949 14.7985 8.71512 14.5829C8.93076 14.3672 9.0519 14.0748 9.0519 13.7698C9.0519 13.4649 8.93076 13.1724 8.71512 12.9568L6.34264 10.5843H15.182C15.4868 10.5843 15.7792 10.4632 15.9948 10.2476C16.2103 10.0321 16.3314 9.73969 16.3314 9.43484C16.3314 9.12998 16.2103 8.83761 15.9948 8.62205C15.7792 8.40648 15.4868 8.28538 15.182 8.28538H6.34264L8.71436 5.9129C8.92989 5.69727 9.05093 5.40485 9.05086 5.09997C9.05079 4.79509 8.92961 4.50272 8.71397 4.28719C8.49834 4.07166 8.20592 3.95061 7.90104 3.95068C7.59616 3.95076 7.30379 4.07194 7.08826 4.28757H7.08979Z" fill="black" />
+          </g>
+          <defs>
+            <clipPath id="clip0_29_10149">
+              <rect width="18.3913" height="18.3913" fill="white" transform="matrix(-1 0 0 1 18.6305 0.239258)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div id="slide_right">
+        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_29_10143)">
+            <path d="M11.9101 14.5821L16.2451 10.2471C16.4603 10.0316 16.5812 9.7394 16.5812 9.43479C16.5812 9.13018 16.4603 8.83803 16.2451 8.62251L11.9109 4.28676C11.6952 4.07112 11.4028 3.94998 11.0978 3.94998C10.7929 3.94998 10.5004 4.07112 10.2848 4.28676C10.0691 4.50239 9.94798 4.79486 9.94798 5.09981C9.94798 5.40476 10.0691 5.69722 10.2848 5.91286L12.6572 8.28533H3.81791C3.51306 8.28533 3.22069 8.40644 3.00513 8.622C2.78956 8.83757 2.66846 9.12994 2.66846 9.43479C2.66846 9.73965 2.78956 10.032 3.00513 10.2476C3.22069 10.4631 3.51306 10.5842 3.81791 10.5842H12.6572L10.2855 12.9567C10.07 13.1724 9.94894 13.4648 9.94902 13.7697C9.94909 14.0745 10.0703 14.3669 10.2859 14.5824C10.5015 14.798 10.794 14.919 11.0988 14.9189C11.4037 14.9189 11.6961 14.7977 11.9116 14.5821H11.9101Z" fill="black" />
+          </g>
+          <defs>
+            <clipPath id="clip0_29_10143">
+              <rect width="18.3913" height="18.3913" fill="white" transform="matrix(1 0 0 -1 0.369507 18.6306)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="address" class="address_wrapper">
+    <div class="container">
+      <aside class="address_info">
+        <img src="/img/logo/logofull-white.svg" alt="Logo Touch Prime">
+
+        <div class="address_inner">
+          <h1>Onde nos encontrar</h1>
+          <a href="https://www.google.com/maps/place/Touch+Prime/@-22.9386675,-43.3407379,15z/data=!4m2!3m1!1s0x0:0xb6444be61a8a228b?sa=X&ved=1t:2428&ictx=111" target="_blank">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 11.9798C11.8094 11.9798 11.147 11.7055 10.6586 11.2171C10.1702 10.7287 9.89587 10.0663 9.89587 9.37565C9.89587 8.68498 10.1702 8.0226 10.6586 7.53423C11.147 7.04585 11.8094 6.77148 12.5 6.77148C13.1907 6.77148 13.8531 7.04585 14.3415 7.53423C14.8298 8.0226 15.1042 8.68498 15.1042 9.37565C15.1042 9.71763 15.0368 10.0563 14.906 10.3722C14.7751 10.6882 14.5833 10.9753 14.3415 11.2171C14.0996 11.4589 13.8126 11.6507 13.4966 11.7816C13.1807 11.9125 12.842 11.9798 12.5 11.9798ZM12.5 2.08398C10.5662 2.08398 8.71151 2.85221 7.34405 4.21966C5.9766 5.58712 5.20837 7.44178 5.20837 9.37565C5.20837 14.8444 12.5 22.9173 12.5 22.9173C12.5 22.9173 19.7917 14.8444 19.7917 9.37565C19.7917 7.44178 19.0235 5.58712 17.656 4.21966C16.2886 2.85221 14.4339 2.08398 12.5 2.08398Z" fill="white" fill-opacity="0.8" />
+            </svg>
+            <span>Rua Xingú, 241 - Loja A, Freguesia</span>
+          </a>
+        </div>
+
+        <div class="map_content_mobile">
+          <gmp-map center="-22.93855857849121,-43.340919494628906" zoom="20" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="-22.93855857849121,-43.340919494628906" title="My location"></gmp-advanced-marker>
+          </gmp-map>
+        </div>
+
+
+        <div class="address_contact">
+          <h1>Contato</h1>
+          <a href="wa.me" target="_blank">Tel: (21) 99999-9999</a>
+          <a href="mailto:" target="_blank">Email: touchprime@email.com</a>
+        </div>
+
+        <a class="button_outline" href="wa.me">Fale conosco pelo WhatsApp</a>
+      </aside>
+
+      <aside class="map_container">
+
+        <div class="map_content">
+          <gmp-map center="-22.93855857849121,-43.340919494628906" style="border-radius: 10px" zoom="14" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="-22.93855857849121,-43.340919494628906" title="My location"></gmp-advanced-marker>
+          </gmp-map>
+        </div>
+
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer_info container">
+      <img src=" /img/logo/logotype-grey.svg" alt="Touch Prime Logo">
+      <span>© 2024 Touch Prime | Todos os direitos reservados</span>
+      <nav class="social_media">
+        <a href="#" target="_blank"><img src="/img/icons/insta.svg" alt="ícone instagram"></a>
+        <a href="#" target="_blank"><img src="/img/icons/whatsapp.svg" alt="ícone whatsapp"></a>
+        <a href="#" target="_blank"><img src="/img/icons/gmail.svg" alt="ícone gmail"></a>
+      </nav>
+    </div>
+    <div class="footer_copy">
+      <p>Desenvolvido por <a href="#" target="_blank">Eduardo Sant</a></p>
+    </div>
+  </footer>
 
   <script src="script/script.js"></script>
 </body>

@@ -1,15 +1,15 @@
-
-
 :root{
   font-size: 62.5%;
 
 /*Colors*/
 --primary-color: #FF5F0E;
---primary-gradiente:  linear-gradient(to right, #FF5F0E, #993908);
+--primary-gradiente:  linear-gradient(to right, #FF5F0E,#ff5e0e,#ff5e0e93, #ffffff);
 --white: #fff;
 --black:#000;
 --white-text-80: #ffffffcc;
 --white-10: #ffffff10;
+--text-muted: #6C757D;
+--text-muted-40: #6c757d62;
 
 /*Fonts*/
 --text-46: 4.6rem;
@@ -19,7 +19,7 @@
 --text-16: 1.6rem;
 --text-14: 1.4rem;
 --text-12: 1.2rem;
---black: 900;
+--black-font: 900;
 --bold: 800;
 --semibold: 700;
 --medium: 600;
@@ -29,9 +29,8 @@
 /*Effects*/
 --dp-shadow: 0 4px 4px rgba(0, 0, 0, 0.10);
 --dp2-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
---dp3-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+--dp3-shadow: 4px 4px 10px rgba(0, 0, 0, 0.411);
 }
-
 
 body{
   background: var(--white);
@@ -40,8 +39,8 @@ body{
 }
 
 .container{
-  max-width: 1220px;
-  padding-inline: 1rem;
+  max-width: 1240px;
+  padding-inline: 2rem;
   margin: 0 auto;
 }
 
@@ -66,7 +65,7 @@ body{
   transition: opacity .5s;
   max-width: max-content;
   transition: background-color .5s;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .button_filled:hover {
@@ -82,7 +81,7 @@ color: var(--white);
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .title h1 {
@@ -102,6 +101,14 @@ color: var(--white);
   text-align: center;
 }
 
+.visible {
+  display: flex !important; 
+}
+
+.hidden {
+  display: none !important;
+}
+
 @media(max-width: 769px){
   body{
     background: var(--primary-color);
@@ -109,14 +116,11 @@ color: var(--white);
   }
 
   .button_outline{
-    font-size: var(--text-14);
-  }
-
-  .button_outline{
     background-color: unset;
     color: var(--white);
     border: 1px solid var(--white);
     margin: 0 auto;
+    font-size: var(--text-14);
     }
 
   .button_filled{
@@ -131,6 +135,7 @@ color: var(--white);
     font-size: var(--text-12);
     line-height: 1.8rem;
     max-width: 290px;
+    color: var(--white-text-80);
   }
   
 }
@@ -138,7 +143,7 @@ color: var(--white);
 @media(max-width: 540px){
 
   .title{
-    gap: 1rem;
+    gap: 0rem;
   }
 
   .title h1 {
