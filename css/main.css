@@ -17,7 +17,7 @@ header{
   position: fixed;
   inset: 0;
   z-index: 999;
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(120px);
 }
 
 .navigation_list_mobile{
@@ -35,6 +35,8 @@ header{
 .close_mobile_menu{
   position: absolute;
   bottom: 3.2rem;
+  padding: 2.4rem;
+  cursor: pointer;
 }
 
 .header {
@@ -398,7 +400,6 @@ header{
 /*******************************Breaking Points*******************************/
 @media(max-width: 769px){
 .services_wrapper{
-  padding-block: 5rem;
   gap: 3.6rem;
 }
 
@@ -464,9 +465,6 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  overflow-x: scroll;
-  gap: 4rem;
 }
 
 .brands_wrapper::-webkit-scrollbar { 
@@ -477,6 +475,8 @@ header{
 @media(max-width: 769px){
   .brands_wrapper {
     padding: 2.4rem;
+    justify-content: flex-start;
+    gap: 8rem;
   }
 
   .brands_wrapper img {
@@ -505,6 +505,8 @@ header{
 .products_header h1 {
   font-size: var(--text-46);
   color: var(--white);
+  text-align: center;
+  margin-bottom: 6rem;
 }
 
 .products_header h1 span {
@@ -559,7 +561,7 @@ header{
 }
 
 /*******************************Breaking Points*******************************/
-@media(max-width: 1100px){
+@media(max-width: 1120px){
   .products_header h1 {
     font-size: var(--text-40);
     margin-left: 5.2rem;
@@ -644,10 +646,11 @@ header{
   border-radius: 5px;
   background-color: var(--white);
   max-width: 440px;
-  min-width: 260px;
+  min-width: 270px;
   width: 100%;
   padding: 2.4rem;
   box-shadow: var(--dp3-shadow);
+  flex-grow: 1;
 }
 
 .item_rating{
@@ -685,8 +688,8 @@ header{
   gap: 2rem;
 }
 
-#slide_left, 
-#slide_right{
+#scroll-left, 
+#scroll-right{
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -698,15 +701,24 @@ header{
   box-shadow: var(--dp2-shadow);
 }
 
-#slide_left:hover, 
-#slide_right:hover{
+#scroll-left:hover, 
+#scroll-right:hover{
   opacity: .9;
 }
 
 /*******************************Breaking Points*******************************/
 @media(max-width: 1100px){}
 @media(max-width: 769px){
+  .testionial_item{
+    max-width: 250px;
+  }
 
+  .slide_buttons{
+    display: none;
+  }
+  .testimonials_wrapper{
+    padding-bottom: 4.2rem;
+  }
 }
 @media(max-width: 540px){
 }

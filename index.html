@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="shortcut icon" href="img/icons/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +20,14 @@
 <body>
   <div class="mobile_menu">
     <ul class="navigation_list_mobile">
-      <li class="navigation_item_mobile navigation_selected"><a href="#hero">Início</a></li>
+      <li class="navigation_item_mobile "><a href="#hero">Início</a></li>
       <li class="navigation_item_mobile"><a href="#services">Serviços</a></li>
       <li class="navigation_item_mobile"><a href="#products">Produtos</a> </li>
       <li class="navigation_item_mobile"><a href="#address">Atendimento</a></li>
     </ul>
-    <img class="close_mobile_menu" src="/img/icons/chevron-down.svg" alt="fechar menu">
+    <div class="close_mobile_menu">
+      <img src="/img/icons/close.svg" alt="fechar menu">
+    </div>
   </div>
 
   <header>
@@ -60,10 +63,10 @@
           <p>Ampla seleção de produtos de alta qualidade e suporte especializado para encontrar
             as melhores soluções e serviços.</p>
         </div>
-        <div class="gallery_hero_mobile">
-          <img class="gallery_1 gallery_item" src="/img/images/processador.png" alt="imagem 1">
-          <img class="gallery_2_mobile gallery_item" src="/img/images/manutencao.png" alt="imagem 2">
-          <img class="gallery_3_mobile gallery_item" src="/img/images/gamer.png" alt="imagem 3">
+        <div class="gallery_hero_mobile" id="gallery_hero_mobile">
+          <img class="gallery_1 gallery_item content" src="/img/images/processador.png" alt="imagem 1">
+          <img class="gallery_2_mobile gallery_item content" src="/img/images/manutencao.png" alt="imagem 2">
+          <img class="gallery_3_mobile gallery_item content" src="/img/images/gamer.png" alt="imagem 3">
         </div>
         <a class="button_outline" href="wa.me">Faça um orçamento</a>
       </div>
@@ -109,12 +112,20 @@
 
   </section>
 
-  <section class="brands_wrapper">
-    <img src="/img/brands/jbl.svg" alt="JBL Logo">
-    <img src="/img/brands/intel.svg" alt="Intel Logo">
-    <img src="/img/brands/amd.svg" alt="AMD Logo">
-    <img src="/img/brands/apple.svg" alt="Apple Logo">
-    <img src="/img/brands/logitech.svg" alt="Logitech Logo">
+  <section class="slider-container" id="carousel">
+    <div class="brands_wrapper slider">
+      <img class="slider__slide" src="/img/brands/jbl.svg" alt="JBL Logo">
+      <img class="slider__slide" src="/img/brands/intel.svg" alt="Intel Logo">
+      <img class="slider__slide" src="/img/brands/amd.svg" alt="AMD Logo">
+      <img class="slider__slide" src="/img/brands/apple.svg" alt="Apple Logo">
+      <img class="slider__slide" src="/img/brands/nvidia.svg" alt="Nvidia Logo">
+      <img class="slider__slide" src="/img/brands/asus.svg" alt="Asus Logo">
+      <img class="slider__slide" src="/img/brands/corsair.svg" alt="Corsair Logo">
+      <img class="slider__slide" src="/img/brands/razer.svg" alt="Razer Logo">
+      <img class="slider__slide" src="/img/brands/hyperx.svg" alt="HyperX Logo">
+      <img class="slider__slide" src="/img/brands/logitech.svg" alt="Logitech Logo">
+      <img class="slider__slide" src="/img/brands/samsung.svg" alt="Samsung Logo">
+    </div>
   </section>
 
   <section id="products" class="products_wrapper">
@@ -164,7 +175,72 @@
       <p>O que os nossos clientes dizem sobre o nosso atendimento</p>
     </div>
 
-    <div class="testimonials_list container">
+    <div id="testimonials_list" class="testimonials_list container">
+      <div class="testionial_item">
+        <div class="item_rating">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+        </div>
+
+        <div class="item_content">
+          <p>“Fui tirar uma dúvida na loja e fui muito bem tratada pelo vendedor. Muito simpático e atencioso,
+            me ajudou com uma informação mesmo não sendo um serviço diretamente feito pela loja.
+            É raro um atendimento sem tentarem apenas te empurrar um serviço, mas sim se importando em ajudar!
+            Obrigada pelo suporte, sem dúvidas irei indicar a todos.”</p>
+        </div>
+
+        <div class="item_author">
+          <img src="/img/testimonials/Ellipse 5-2.png" alt="foto do autor">
+          <span>Giulia Senna</span>
+        </div>
+      </div>
+
+      <div class="testionial_item">
+        <div class="item_rating">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+        </div>
+
+        <div class="item_content">
+          <p>“Super indico, o serviço feito no meu telefone
+            foi rápido e muito bem feito!
+            Ele segue funcionando perfeitamente como qnd comprei!”</p>
+        </div>
+
+        <div class="item_author">
+          <img src="/img/testimonials/Ellipse 5.png" alt="foto do autor">
+          <span>Samanta Passos</span>
+        </div>
+      </div>
+
+      <div class="testionial_item">
+        <div class="item_rating">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+          <img src="/img/icons/star-rating.svg" alt="5 stars">
+        </div>
+
+        <div class="item_content">
+          <p>“Loja marvilhoooosa!Muito gentis e atenciosos. Levei meu Notebook,
+            ferramenta de trabalho. Serviço de excelência, trazendo esclarecimento
+            das melhores opções. Sem falar na agilidade. Fiquei muitíssimo satisfeita.
+            Super Recomendo!”</p>
+        </div>
+
+        <div class="item_author">
+          <img src="/img/testimonials/Ellipse 5-1.png" alt="foto do autor">
+          <span>Mônica Silva Lopes</span>
+        </div>
+      </div>
+
       <div class="testionial_item">
         <div class="item_rating">
           <img src="/img/icons/star-rating.svg" alt="5 stars">
@@ -232,7 +308,7 @@
     </div>
 
     <div class="slide_buttons">
-      <div id="slide_left">
+      <div id="scroll-left">
         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_29_10149)">
             <path d="M7.08979 4.28757L2.75481 8.62255C2.53955 8.83808 2.41865 9.13023 2.41865 9.43484C2.41865 9.73944 2.53955 10.0316 2.75481 10.2471L7.08903 14.5829C7.30466 14.7985 7.59712 14.9196 7.90207 14.9196C8.20703 14.9196 8.49949 14.7985 8.71512 14.5829C8.93076 14.3672 9.0519 14.0748 9.0519 13.7698C9.0519 13.4649 8.93076 13.1724 8.71512 12.9568L6.34264 10.5843H15.182C15.4868 10.5843 15.7792 10.4632 15.9948 10.2476C16.2103 10.0321 16.3314 9.73969 16.3314 9.43484C16.3314 9.12998 16.2103 8.83761 15.9948 8.62205C15.7792 8.40648 15.4868 8.28538 15.182 8.28538H6.34264L8.71436 5.9129C8.92989 5.69727 9.05093 5.40485 9.05086 5.09997C9.05079 4.79509 8.92961 4.50272 8.71397 4.28719C8.49834 4.07166 8.20592 3.95061 7.90104 3.95068C7.59616 3.95076 7.30379 4.07194 7.08826 4.28757H7.08979Z" fill="black" />
@@ -244,7 +320,7 @@
           </defs>
         </svg>
       </div>
-      <div id="slide_right">
+      <div id="scroll-right">
         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_29_10143)">
             <path d="M11.9101 14.5821L16.2451 10.2471C16.4603 10.0316 16.5812 9.7394 16.5812 9.43479C16.5812 9.13018 16.4603 8.83803 16.2451 8.62251L11.9109 4.28676C11.6952 4.07112 11.4028 3.94998 11.0978 3.94998C10.7929 3.94998 10.5004 4.07112 10.2848 4.28676C10.0691 4.50239 9.94798 4.79486 9.94798 5.09981C9.94798 5.40476 10.0691 5.69722 10.2848 5.91286L12.6572 8.28533H3.81791C3.51306 8.28533 3.22069 8.40644 3.00513 8.622C2.78956 8.83757 2.66846 9.12994 2.66846 9.43479C2.66846 9.73965 2.78956 10.032 3.00513 10.2476C3.22069 10.4631 3.51306 10.5842 3.81791 10.5842H12.6572L10.2855 12.9567C10.07 13.1724 9.94894 13.4648 9.94902 13.7697C9.94909 14.0745 10.0703 14.3669 10.2859 14.5824C10.5015 14.798 10.794 14.919 11.0988 14.9189C11.4037 14.9189 11.6961 14.7977 11.9116 14.5821H11.9101Z" fill="black" />

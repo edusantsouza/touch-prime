@@ -1,0 +1,51 @@
+/*****************************************BRANDS SLIDER*****************************************/
+
+.slider {
+  --slider-inner-width: 220vh;
+  --slider-speed: 6s;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(-5%) ; }
+  100% { transform: translateX(calc((0px - var(--slider-inner-width)) - 5%))}
+}
+
+.slider {
+  -webkit-transform: translate3d(0, 0, 0);
+  animation: scroll linear infinite var(--slider-speed);
+  width: calc(2 * var(--slider-inner-width));
+  transition: animation-play-state ease 0.3s;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.slider-container {
+  overflow:hidden;
+  position: relative;
+  width: 100%;
+  background: var(--black);
+  .slider {
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider__slide {
+    flex-basis: 0;
+    background: black;
+    background: rgba(0,0,0,1);
+    &:hover {
+      background: rgba(0,0,0,0.8);
+      cursor: pointer;
+    }
+  }
+}
+
+/*******************************Breaking Points*******************************/
+@media(max-width: 769px){
+  .slider {
+    --slider-inner-width: 80vh;
+    --slider-speed: 6s;
+  }
+}
+
