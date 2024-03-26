@@ -90,7 +90,6 @@ header{
   border-bottom: 3px solid var(--primary-color);
 }
 
-
 header .button_outline{
   color: var(--white);
   border: 1px solid var(--white);
@@ -108,7 +107,7 @@ header .button_outline:hover {
     max-width: 400px;
   }
 
-  .logotype img {
+  .logotype-white img {
     max-width: 200px;
   }
 }
